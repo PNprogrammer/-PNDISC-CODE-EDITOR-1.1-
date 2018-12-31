@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+
+💻PNDISC CODE EDITOR 1.1💻
+
+</title>
+
+<style>
+
+#body {margin:0;background-color:orange;}
+
+#title {color:blue;background-color:red;padding:10px;display:block;text-align:center;}
+
+#introduction {background-color:DodgerBlue;height:250px;padding:10px;color:maroon;}
+
+#codeinput {display:block;margin:0;box-sizing:border-box;width:100%;height:350px;min-width:100%;max-width:100%;min-height:350px;max-height:350px;background-color:black;color:white;}
+
+#runb {background-color:red;color:lime;border:3px outset orange;}
+
+#cibcp {background-color:blue;border:3px outset orange;}
+
+#cibcb {background-color:blue;color:lime;border:3px outset orange;}
+
+#cicp {background-color:yellow;border:3px outset orange;}
+
+#cicb {background-color:yellow;color:blue;border:3px outset orange;}
+
+#cwbcp {background-color:lime;border:3px outset orange;}
+
+#cwbcb {background-color:lime;color:maroon;border:3px outset orange;}
+
+#runbox {background-color:DodgerBlue}
+
+#cibcbox {background-color:yellow}
+
+#cicbox {background-color:lime}
+
+#cwbcbox {background-color:blue}
+</style>
+
+</head>
+
+<body id="body">
+
+<!--Title-->
+
+<div id="title">
+
+<h1>
+
+💻PNDISC CODE EDITOR 1.1💻
+
+</h1>
+
+</div>
+
+<!--Introduction-->
+
+<div id="introduction">
+
+<h3>
+
+PNDISC CODE EDITOR allows you to test your websites not inside the editor but as a new window! This will allow you to see the website exactly like it would normally be and quickly. You just type the code bellow and click 'Run code'. You can also change the colors. Go to fullscreen to see more of the website background color. Sorry but on most phones there is not ennough space for the website background color.
+
+</h3>
+
+</div>
+
+<!--Code input-->
+
+<textarea id="codeinput"></textarea>
+
+<div id="runbox">
+
+<!--run button-->
+
+<button type="button" id="runb" onclick="run()">Run code</button>
+
+</div>
+
+<!--run script-->
+
+<script>
+
+function run()
+
+{
+
+var codeinput = document.getElementById("codeinput").value;
+
+var website = window.open();
+
+website.document.write(codeinput)
+
+}
+
+</script>
+
+<div id="cibcbox">
+
+<!--change input background color picker-->
+
+
+<input id="cibcp" type="color">
+
+<!--change input background color button-->
+
+<button type="button" id="cibcb" onclick="cibc()">Change input background color</button>
+
+</div>
+
+<!--change input background color script-->
+
+<script>
+
+function cibc()
+
+{
+
+var codeinput = document.getElementById("codeinput").style;
+
+var cibcp = document.getElementById("cibcp").value;
+
+codeinput.backgroundColor=cibcp;
+
+}
+
+</script>
+
+<div id="cicbox">
+
+<!--change input color picker-->
+
+<input id="cicp" type="color">
+
+<!--change input color button-->
+
+<button type="button" id="cicb" onclick="cic()">Change input color</button>
+
+</div>
+
+<!--change input color script-->
+
+<script>
+
+function cic()
+
+{
+
+var codeinput = document.getElementById("codeinput").style;
+
+var cicp = document.getElementById("cicp").value;
+
+codeinput.color=cicp;
+
+}
+
+</script>
+
+<div id="cwbcbox">
+
+<!--change website background color picker-->
+
+<input id="cwbcp" type="color">
+
+<!--change website background color button-->
+
+<button type="button" id="cwbcb" onclick="cwbc()">Change website background color</button>
+
+</div>
+
+<!--change website background color script-->
+
+<script>
+
+function cwbc()
+
+{
+
+var body = document.getElementById("body").style;
+
+var cwbcp = document.getElementById("cwbcp").value;
+
+body.backgroundColor=cwbcp;
+
+}
+
+</script>
+
+</body>
+
+</html>
+<!--Created by PNDISC©-->
